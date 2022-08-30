@@ -31,3 +31,7 @@ resetButton.addEventListener('click',function(evt){
   todoList.innerHTML = ''
   todoInput.value = ''
 })
+
+todoList.addEventListener('click',function(evt){
+  todoList.removeChild(evt.target)
+})
