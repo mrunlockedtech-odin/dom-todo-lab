@@ -9,9 +9,14 @@ const todoList = document.getElementById("todo-list")
 
 //Event Listeners
 todoButton.addEventListener('click',function(evt){
-  const li = document.createElement('li')
-  li.textContent = todoInput.value
-  console.dir(li)
-  todoInput.value = ""
-  todoList.appendChild(li)
+  if(todoInput.value === ''){
+    alert("Please Enter a Task In The Box")
+  }
+  else{  
+    const li = document.createElement('li')
+    li.textContent = todoInput.value
+    console.dir(li)
+    todoInput.value = ""
+    todoList.appendChild(li)
+  }
 })
